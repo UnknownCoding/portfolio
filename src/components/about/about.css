@@ -1,0 +1,129 @@
+main{
+    height: 100vh;
+}
+
+.about_container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+    padding-top: 3rem;
+}
+
+h2{
+    color:var(--color-primary);
+}
+
+h5,h2{
+    text-align: center;
+}
+
+.about_image{
+    width: 100%;
+    border-radius: 2rem;
+    background: linear-gradient(45deg,#ce8617,#8aa4d5,#ce8617);
+    place-items: center;
+    display:flex;
+    
+}
+.about_backdrop{
+    height: 100%;
+}
+
+
+.aboutIMg{
+    width: 100%;
+    border-radius: 2rem;
+    transform: rotate(10deg);
+    height: 100%;
+    transition: var(--transition);
+}
+
+.aboutIMg:hover{
+    transform:rotate(0);
+}
+
+.about_cards{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+.individual_cards{
+    background-color: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.individual_cards:hover{
+    border-color: var(--color-primary) ;
+    background-color: transparent;
+    cursor: default;
+}
+
+.about_icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.individual_cards > h5{
+    font-size: 0.95rem;
+}
+
+.individual_cards > small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.about_content > p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+@media screen and (max-width: 600px) {
+    .about_container{
+        grid-template-columns: 1fr;
+        gap: 15%;
+    }    
+    .about_image{
+        width: 75% !important;
+    }
+    .aboutIMg{
+        width: 100%;  
+    }
+    .about_backdrop{
+        width: 100%;
+    }
+    .about_cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .about_content > p {
+        margin: 2.5rem 0 !important;   
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .about_container{
+        grid-template-columns: 1fr;
+        gap: 10%;
+    }    
+    .aboutIMg{
+        width: 100%;  
+    }
+    .about_image{
+        width: 50%;
+        margin: 0px auto;
+    }
+    .about_backdrop{
+        width: 100%;
+    }
+    .about_content > p {
+        margin: 1rem 0 1.5rem;    
+    }
+    
+}

@@ -1,0 +1,83 @@
+main{
+    height: 100vh;
+}
+
+.experience_container{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 3rem;
+    padding-top: 3rem;
+}
+
+.experience_container > div{
+    background-color: var(--color-bg-variant);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.experience_container > div:hover{
+    border-color: 1px solid var(---color-primary-variant);
+    background-color: transparent;
+}
+
+.experience_container > div > h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.experience_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.details{
+    display: flex;
+    gap: 1rem;
+}
+
+.icon{
+    color: var(--color-primary);
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 1024px) {
+    .experience_container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-top: 30px;
+    }
+    
+    .experience_container > div{
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    #experience{
+        margin-top: 10rem;
+    }
+    .details{
+        padding: 1rem;
+    }
+}
+
+/* 600px or less */
+@media screen and (max-width: 600px) {
+
+    #experience{
+        margin-top: 30rem;
+    }
+    .experience_container{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .experience_container > div{
+        width: 95%;
+        padding: 1rem;
+    }
+
+}
