@@ -31,6 +31,9 @@ function App() {
 
   return (
     <div id='yams'>
+      <div>
+        
+      </div>
       <Header/>
       {!isScroll ? (
         <>
